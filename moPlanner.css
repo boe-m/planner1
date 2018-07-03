@@ -1,0 +1,55 @@
+ul {list-style-type: none;}
+body {font-family: 'Dancing Script', cursive;}
+
+/* Month header */
+.months {
+    width: 100%; /*Use this to adjust the width of the months box*/
+    background: #900C3F !important; /*The important flag should be used sparsely--in this file it is used to ensure that colors will appear during printing*/
+    text-align: center;
+}
+
+/* Month list */
+.months ul {
+    margin: 0;
+}
+
+.months li {
+    color: white !important;
+    font-size: 55px;
+    padding: 10px; /*Refers to how much space there is around the text inside the border*/
+}
+
+/* Days (Mon-Sun) */
+.days {
+    margin: 0;
+    padding: 0px;
+    background-color:#ddd!important;
+}
+
+.days li {
+    display: inline-block;
+    width: 14.28%;
+    color: #667;
+    text-align: center;
+    border: .5px solid gray;
+}
+
+/* Dates (1-31) */
+.dates {
+    background: #eee;
+    margin: 0; /*Makes it so that the days of the week section touches the dates section*/
+    padding: 0px; /*Makes it so that the days align left with the background box for the dates section*/
+    font-size: 0px; /*Makes it so that the wrap around from the in-line block display doesn't result in gaps*/
+}
+
+.dates li {
+    display: inline-block; /*Wraps around blocks in a line*/
+    padding-left: 2px; /*Used here to space the date from the left border*/
+    margin-top: -.5px;
+    font-size:12px;
+    color: #777;
+    text-align: left;
+    height: 130px;
+    width: 14.28%;
+    border: .5px solid gray;
+}

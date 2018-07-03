@@ -1,0 +1,42 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Planner</title>
+  <meta name="description" content="Planner">
+  <meta name="author" content="M.Boe">
+
+  <link rel="stylesheet" href="planner.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+
+	<div id="app">
+
+	  <ul class="months">
+            <li v-for="month in months">
+              {{ month.text }}
+            </li>
+          </ul>
+
+    	  <ul class="days">
+            <li v-for="day in days">
+              {{ day.text }}
+            </li>
+          </ul>
+
+
+	  <ul class="dates">
+	    <li v-for="date in dates">
+              {{ date.text }}
+            </li>
+          </ul>
+	</div>
+
+	<script src="planner.js"></script>
+</body>
+</html>

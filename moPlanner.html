@@ -22,25 +22,24 @@
 <body>
 
 	<div id="app">
-
 	  <ul class="months">
-            <li>July 2018<br><!--<span style="font-size:40px;text-align: center;">2018</span>--></li>
-          </ul>
+      <li>July 2018</li> <!-- Change the text here to change the calendar month-->
+    </ul>
 
-    	  <ul class="days">
-            <li v-for="day in days">
-              {{ day.text }}
-            </li>
-          </ul>
-
+    <ul class="days">
+      <li v-for="day in days">
+        {{ day.text }}
+      </li>
+    </ul>
 
 	  <ul class="dates">
 	    <li v-for="date in dates">
-              {{ date.text }}
-            </li>
-          </ul>
+        {{ date.text }}
+      </li>
+    </ul>
 	</div>
 
-	<script src="moPlanner.js"></script>
+  <script src="moPlanner.js"></script>
+
 </body>
 </html>

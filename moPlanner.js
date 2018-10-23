@@ -58,9 +58,16 @@ var app = new Vue({
 /*****************************************************************************
 Editing the Vue JS content
 *****************************************************************************/
-var noDays = 31;
+var noDays = 31; //Number of Days in the month
+var startDay = 2 // The day of the week 0-6 (Sun-Sat) that the month starts on
 var i = 1;
-while (i <= noDays){
-  app.dates.push({ text : i.toString()});
+while (i <= (noDays + startDay)) {
+  if (i <= startDay){
+    app.dates.push({ text : '\b'});
+  } else {
+    var j = i - startDay
+    app.dates.push({ text : j.toString()});
+  }
   i += 1;
 }
+currMonth += 1;

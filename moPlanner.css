@@ -24,7 +24,11 @@ body {font-family: 'Dancing Script', cursive;}
     margin: 0;
     padding: 0px;
     background-color:#ddd!important;
+}table, th, td {
+    border: 1px solid black;
+    padding: 1px;
 }
+
 
 .days li {
     display: inline-block;

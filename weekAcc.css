@@ -6,7 +6,14 @@ table, th, td {
 th {
     background-color: black;
     color: white;
-    text-align: center
+    text-align: center;
+}
+
+#Notes_Column, #To_Get_Column {
+  font-family: Georgia, serif;
+  padding: 2px;
+  text-align: left;
+  vertical-align: top;
 }
 
 @media print {

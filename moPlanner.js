@@ -63,7 +63,7 @@ var startDay = 2 // The day of the week 0-6 (Sun-Sat) that the month starts on
 var i = 1;
 while (i <= (noDays + startDay)) {
   if (i <= startDay){
-    app.dates.push({ text : '\b'});
+    app.dates.push({ text : '.'});
   } else {
     var j = i - startDay
     app.dates.push({ text : j.toString()});

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto auto auto auto auto auto auto;
+	  grid-gap: 1px;
+	  background-color: black;
+	  padding: 1px;
+	}
+
+	.grid-column-header {
+	  background-color: black;
+	  /*padding: 5px;
+	  font-size: 30px;*/
+	  color: white;
+	  text-align: center;
+	}
+
+	.grid-item {
+	  background-color: white;
+	}
+
+	.time {
+	  grid-column: 1;
+	  background-color: white;
+	  /*padding: 5px;
+	  font-size: 30px;*/
+	  text-align: center;
+	}
+
+	.engw {
+	  background-color: orange;
+	  text-align: center;
+	}
+
+	.blankspace {
+	  background-color: transparent;
+	}
+
+
+	</style>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+<div id="app">
+<div class="grid-container">
+  <div class="grid-column-header">&nbsp</div>
+  <div class="grid-column-header" v-for="day in days">{{ day.text }}</div>
+  <div class="time" v-for="hour in hours" :style="{gridRow: hour.index+1 }">{{ hour.text }}</div>
+  <div class="grid-item" :style="{gridColumn: 2, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 3, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 4, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 5, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 6, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 7, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div class="grid-item" :style="{gridColumn: 8, gridRow: hour.index+1 }" v-for="hour in hours">&nbsp</div>
+  <div style="grid-column: 3; grid-row: 2 / 26; display: flex; flex-direction: column;">
+       <div class="blankspace" style="flex: 630"></div>
+       <div class="engw" style="flex: 65; font-size: 5pt">ENGW 3302<br>10:30 AM - 11:35 AM</div>
+       <div class="blankspace" style="flex: 745"></div>
+  </div>
+</div>
+</div>
+</body>
+<foot>
+<script src="weekplGrid.js"></script>
+</foot>
+</html>
+
